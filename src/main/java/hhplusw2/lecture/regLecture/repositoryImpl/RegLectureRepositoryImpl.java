@@ -5,12 +5,17 @@ import hhplusw2.lecture.regLecture.repository.RegLectureRepository;
 
 public class RegLectureRepositoryImpl implements RegLectureRepository {
     @Override
-    public LectureUser regLecture(long lectureNo, long userNo) {
+    public long regLecture(long lectureNo, long userNo) {
+        return 0;
+    }
+
+    @Override
+    public LectureUser getLectureByRegNo(long regNo) {
         return null;
     }
 
     @Override
-    public LectureUser getLecturebyUser(long lectureNo, long userNo) {
+    public LectureUser getLectureByUserAndLecture(long lectureNo, long userNo) {
         return null;
     }
 }

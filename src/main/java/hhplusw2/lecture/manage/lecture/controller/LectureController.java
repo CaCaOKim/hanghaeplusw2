@@ -1,10 +1,8 @@
 package hhplusw2.lecture.manage.lecture.controller;
 
+import hhplusw2.lecture.manage.lecture.domain.Lecture;
 import hhplusw2.lecture.manage.lecture.service.LectureService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/manage/lecture")
@@ -16,10 +14,14 @@ public class LectureController {
     }
 
     // 강의 생성 및 수정
-//    @GetMapping("/save")
-//    public Lecture saveLecture(@RequestBody Lecture lecture) throws InterruptedException {
-//        return lectureService.getPoint(id);
-//    }
+    @PostMapping("/save")
+    public Lecture saveLecture(@RequestBody Lecture lecture) throws InterruptedException {
+        return lectureService.saveLecture(lecture);
+    }
 
     // 강의 조회
+    @GetMapping("/{lectureNo}")
+    public Lecture getLecture(@PathVariable long lectureNo) throws InterruptedException {
+        return lectureService.getLectureByLectureNo(lectureNo);
+    }
 }

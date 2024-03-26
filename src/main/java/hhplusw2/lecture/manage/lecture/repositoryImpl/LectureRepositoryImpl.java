@@ -5,12 +5,12 @@ import hhplusw2.lecture.manage.lecture.repository.LectureRepository;
 
 public class LectureRepositoryImpl implements LectureRepository {
     @Override
-    public Lecture saveLecture(Lecture lecture) {
-        return null;
+    public long saveLecture(long lectureNo, String lectureNm, long lecturerNo, String lectureYmd, long maxNum, String completeYn, long createUserNo) {
+        return 0;
     }
 
     @Override
-    public Lecture getLecturebyUser(Lecture lecture) {
+    public Lecture getLecture(long lectureNo) {
         return null;
     }
 }
