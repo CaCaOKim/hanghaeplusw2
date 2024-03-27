@@ -22,6 +22,6 @@ public class LectureController {
     // 강의 조회
     @GetMapping("/{lectureNo}")
     public Lecture getLecture(@PathVariable long lectureNo) throws InterruptedException {
-        return lectureService.getLectureByLectureNo(lectureNo);
+        return lectureService.getLecture(lectureNo);
     }
 }

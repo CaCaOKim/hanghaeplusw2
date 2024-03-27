@@ -37,6 +37,11 @@ public class RegLectureRepositoryFakeDb implements RegLectureRepository {
         return lectureUser;
     }
 
+    @Override
+    public List<LectureUser> getLecturesByLecture(long lectureNo) {
+        return table.stream().filter(lu -> lu.lectureNo() == lectureNo).toList();
+    }
+
     private void throttle(long millis) {
         try {
             TimeUnit.MILLISECONDS.sleep((long) (Math.random() * millis));
