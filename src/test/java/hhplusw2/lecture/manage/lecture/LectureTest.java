@@ -22,12 +22,12 @@ public class LectureTest {
         this.lectureController = new LectureController(this.lectureService);
     }
 
-    long userNo = 1234;
+    long managerNo = 1234;
 
     @Test
     void 성공_Controller() throws InterruptedException {
         // 강의 정보 입력
-        Lecture lectureInfo = new Lecture(0, "Backend특강", 1111, "2024-03-30", 10, "N", userNo, System.currentTimeMillis());
+        Lecture lectureInfo = new Lecture(0, "Backend특강", 1111, "2024-03-30", 10, "N", managerNo, System.currentTimeMillis());
 
         // 강의 생성
         Lecture saveLecture = this.lectureController.saveLecture(lectureInfo);
@@ -48,7 +48,7 @@ public class LectureTest {
     @Test
     void 성공_Service() throws InterruptedException {
         // 강의 정보 입력
-        Lecture lectureInfo = new Lecture(0, "Backend특강", 1111, "2024-03-30", 10, "N", userNo, System.currentTimeMillis());
+        Lecture lectureInfo = new Lecture(0, "Backend특강", 1111, "2024-03-30", 10, "N", managerNo, System.currentTimeMillis());
 
         // 강의 생성
         Lecture saveLecture = this.lectureService.saveLecture(lectureInfo);
